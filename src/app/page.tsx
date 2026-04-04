@@ -1,65 +1,144 @@
-import Image from "next/image";
+import { Section } from "@/components/Section";
+import { PrimaryButton } from "@/components/PrimaryButton";
+import { SecondaryButton } from "@/components/SecondaryButton";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div>
+      {/* Hero Section */}
+      <Section className="bg-gradient-to-br from-neutral-50 to-neutral-100">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-display text-neutral-900 mb-6">
+            Transform Your Space Into Something Extraordinary
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-body text-neutral-600 mb-8 max-w-2xl mx-auto">
+            We create elegant, sophisticated interior designs that reflect your unique style and inspire confidence.
+            From residential to commercial spaces, we bring your vision to life with premium craftsmanship.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <PrimaryButton>
+              View Our Portfolio
+            </PrimaryButton>
+            <SecondaryButton>
+              Schedule Consultation
+            </SecondaryButton>
+          </div>
+        </div>
+        {/* Hero Image Placeholder */}
+        <div className="mt-12 h-96 bg-neutral-200 rounded-lg flex items-center justify-center">
+          <span className="text-neutral-500">Hero Image Placeholder</span>
+        </div>
+      </Section>
+
+      {/* Services Preview */}
+      <Section>
+        <div className="text-center mb-12">
+          <h2 className="text-heading-1 text-neutral-900 mb-4">Our Services</h2>
+          <p className="text-body text-neutral-600 max-w-2xl mx-auto">
+            Comprehensive interior design solutions tailored to your needs and budget.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span className="text-2xl">🏠</span>
+            </div>
+            <h3 className="text-heading-3 text-neutral-900 mb-2">Residential Design</h3>
+            <p className="text-body text-neutral-600">
+              Transform your home into a sanctuary that reflects your personality and lifestyle.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span className="text-2xl">🏢</span>
+            </div>
+            <h3 className="text-heading-3 text-neutral-900 mb-2">Commercial Design</h3>
+            <p className="text-body text-neutral-600">
+              Create inspiring workspaces that boost productivity and impress clients.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span className="text-2xl">🎨</span>
+            </div>
+            <h3 className="text-heading-3 text-neutral-900 mb-2">Consultation</h3>
+            <p className="text-body text-neutral-600">
+              Expert guidance to help you make informed design decisions.
+            </p>
+          </div>
         </div>
-      </main>
+      </Section>
+
+      {/* Featured Projects */}
+      <Section className="bg-neutral-50">
+        <div className="text-center mb-12">
+          <h2 className="text-heading-1 text-neutral-900 mb-4">Featured Projects</h2>
+          <p className="text-body text-neutral-600 max-w-2xl mx-auto">
+            Explore our portfolio of stunning transformations that showcase our expertise.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="h-48 bg-neutral-200 flex items-center justify-center">
+                <span className="text-neutral-500">Project {i} Image</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-heading-3 text-neutral-900 mb-2">Modern Living Room</h3>
+                <p className="text-body text-neutral-600 mb-4">
+                  A contemporary redesign that maximizes space and natural light.
+                </p>
+                <SecondaryButton className="w-full">
+                  View Project
+                </SecondaryButton>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <PrimaryButton>
+            View All Projects
+          </PrimaryButton>
+        </div>
+      </Section>
+
+      {/* About Preview */}
+      <Section>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-heading-1 text-neutral-900 mb-4">About Our Studio</h2>
+            <p className="text-body text-neutral-600 mb-6">
+              With over a decade of experience in interior design, we specialize in creating spaces
+              that are not only beautiful but also functional and sustainable. Our team combines
+              artistic vision with technical expertise to deliver exceptional results.
+            </p>
+            <p className="text-body text-neutral-600 mb-6">
+              We believe that great design should enhance your life, not complicate it. That's why
+              we focus on understanding your needs and creating solutions that work for you.
+            </p>
+            <PrimaryButton>
+              Learn More About Us
+            </PrimaryButton>
+          </div>
+          <div className="h-96 bg-neutral-200 rounded-lg flex items-center justify-center">
+            <span className="text-neutral-500">About Image Placeholder</span>
+          </div>
+        </div>
+      </Section>
+
+      {/* Contact CTA */}
+      <Section className="bg-accent text-neutral-900">
+        <div className="text-center">
+          <h2 className="text-heading-1 mb-4">Ready to Transform Your Space?</h2>
+          <p className="text-body mb-8 max-w-2xl mx-auto">
+            Let's discuss your vision and create something extraordinary together.
+            Schedule a consultation today and take the first step toward your dream space.
+          </p>
+          <PrimaryButton className="bg-neutral-900 text-white hover:bg-neutral-800">
+            Get In Touch
+          </PrimaryButton>
+        </div>
+      </Section>
     </div>
   );
 }
