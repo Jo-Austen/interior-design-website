@@ -1,39 +1,48 @@
-# Interior Design Website - Agent Instructions
+# AGENTS.md
 
-## Project Goal
-Create a premium interior design website that showcases design portfolios, provides consultation services, and offers an elegant user experience for potential clients. The site should inspire confidence in the designer's expertise and facilitate easy communication for project inquiries.
+## Project
+Premium interior design website built with Next.js App Router, TypeScript, and Tailwind CSS v4.
 
-## Tech Stack
-- **Framework**: Next.js 16 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Deployment**: Vercel (recommended)
-- **Version Control**: Git with GitHub
+---
 
-## Rules
-- Always use TypeScript for type safety
+## Core Rules
+- Use TypeScript throughout
 - Follow Next.js App Router conventions
-- Maintain responsive design with Tailwind CSS
+- Use Tailwind CSS for styling (no custom CSS in components)
 - Keep components modular and reusable
-- Use semantic HTML and accessibility best practices
-- Optimize images and assets for web performance
-- Follow clean code principles and consistent naming conventions
+- Use semantic HTML and accessible patterns
+- Ensure no TypeScript or hydration errors
 
-## Design Style
-- **Premium**: Elegant, sophisticated aesthetic with high-quality visuals
-- **Minimal**: Clean layouts, ample white space, focused content
-- **Color Palette**: Neutral tones with accent colors for CTAs
-- **Typography**: Modern, readable fonts with clear hierarchy
-- **Imagery**: High-resolution interior design photos and renderings
+---
 
-## Implementation Order
-1. **Setup & Configuration**: Project initialization (completed)
-2. **Basic Layout**: Header, footer, navigation structure
-3. **Homepage**: Hero section, services overview, portfolio preview
-4. **Portfolio Page**: Gallery layout with filtering capabilities
-5. **About Page**: Designer bio, credentials, approach
-6. **Services Page**: Detailed service offerings with pricing
-7. **Contact Page**: Contact form with validation
-8. **Blog/Insights**: Optional content marketing section
-9. **Performance Optimization**: Image optimization, lazy loading
-10. **SEO & Analytics**: Meta tags, structured data, tracking
+## UI Guidance
+- Prefer clean, minimal, premium layouts with strong spacing and typography hierarchy
+- Make layout decisions based on content, parent container, and responsive behavior
+- Use `w-full` by default and let parent containers define width
+- Avoid redundant nested width constraints
+- Add multi-column layouts only when content supports it
+- Choose breakpoints based on actual content pressure, not fixed templates
+
+---
+
+## Refactoring Rules
+- When refactoring styles, do not change business logic
+- Inspect parent-child layout before modifying width utilities
+- Improve spacing, hierarchy, and readability before adding wrappers
+- Prefer adjusting existing classes over restructuring components
+
+---
+
+## Anti-Patterns
+- Do not stack multiple `max-w-*` constraints across nested containers
+- Do not use `mx-auto + max-w-*` as a default everywhere
+- Do not force `grid-cols-1 lg:grid-cols-2` without checking content
+- Do not apply identical narrow widths to both columns in a two-column layout
+- Do not encode page-specific fixes as global rules
+
+---
+
+## Known Pitfalls
+- Tailwind `container` can be too restrictive — prefer explicit parent width control
+- Layout compression is often caused by nested max-width constraints
+- Always check effective width across parent and child elements before adjusting layout

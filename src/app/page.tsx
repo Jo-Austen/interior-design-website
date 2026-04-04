@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       {isTemporaryLanding ? (
         <section className="min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-neutral-50 px-4 py-24 text-center">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-6xl">
             <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-4">
               Interior Design Studio
             </p>
