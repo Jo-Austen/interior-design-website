@@ -57,23 +57,23 @@ export function Header() {
 
       <div className={menuOpen ? "md:hidden border-t border-neutral-200" : "md:hidden hidden border-t border-neutral-200"}>
         <nav className="container mx-auto px-4 py-4 space-y-4">
-          <Link href="/" className="block text-sm font-medium hover:text-accent transition-colors">
+          <Link href="/" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-accent transition-colors">
             Home
           </Link>
-          <Link href="/projects" className="block text-sm font-medium hover:text-accent transition-colors">
+          <Link href="/projects" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-accent transition-colors">
             Projects
           </Link>
-          <Link href="/services" className="block text-sm font-medium hover:text-accent transition-colors">
+          <Link href="/services" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-accent transition-colors">
             Services
           </Link>
-          <Link href="/about" className="block text-sm font-medium hover:text-accent transition-colors">
+          <Link href="/about" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-accent transition-colors">
             About
           </Link>
-          <Link href="/contact" className="block text-sm font-medium hover:text-accent transition-colors">
+          <Link href="/contact" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-accent transition-colors">
             Contact
           </Link>
           <div className="pt-4">
-            <Link href="/contact" className="block rounded-2xl bg-accent px-6 py-3 text-center text-sm font-medium text-neutral-900 hover:bg-accent-hover transition-colors">
+            <Link href="/contact" onClick={() => setMenuOpen(false)} className="block rounded-2xl bg-accent px-6 py-3 text-center text-sm font-medium text-neutral-900 hover:bg-accent-hover transition-colors">
               Contact
             </Link>
           </div>
