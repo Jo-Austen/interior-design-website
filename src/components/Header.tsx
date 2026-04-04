@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { PrimaryButton } from "./PrimaryButton";
 
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -13,8 +18,8 @@ export function Header() {
           <Link href="/" className="text-sm font-medium hover:text-accent transition-colors">
             Home
           </Link>
-          <Link href="/portfolio" className="text-sm font-medium hover:text-accent transition-colors">
-            Portfolio
+          <Link href="/projects" className="text-sm font-medium hover:text-accent transition-colors">
+            Projects
           </Link>
           <Link href="/services" className="text-sm font-medium hover:text-accent transition-colors">
             Services
@@ -28,13 +33,19 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <PrimaryButton>
-            Get Quote
-          </PrimaryButton>
+          <Link href="/contact" className="inline-flex rounded-md bg-accent px-6 py-3 text-sm font-medium text-neutral-900 transition-colors hover:bg-accent-hover">
+            Contact
+          </Link>
         </div>
 
-        {/* Mobile menu button - placeholder for future implementation */}
-        <button className="md:hidden p-2">
+        {/* Mobile menu button */}
+        <button
+          type="button"
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation"
+          onClick={() => setMenuOpen((current) => !current)}
+          className="md:hidden p-2"
+        >
           <span className="sr-only">Open menu</span>
           <div className="w-6 h-6 flex flex-col justify-center">
             <span className="block w-full h-0.5 bg-foreground mb-1"></span>
@@ -44,14 +55,13 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile navigation - hidden by default, can be toggled later */}
-      <div className="md:hidden hidden border-t border-neutral-200">
+      <div className={menuOpen ? "md:hidden border-t border-neutral-200" : "md:hidden hidden border-t border-neutral-200"}>
         <nav className="container mx-auto px-4 py-4 space-y-4">
           <Link href="/" className="block text-sm font-medium hover:text-accent transition-colors">
             Home
           </Link>
-          <Link href="/portfolio" className="block text-sm font-medium hover:text-accent transition-colors">
-            Portfolio
+          <Link href="/projects" className="block text-sm font-medium hover:text-accent transition-colors">
+            Projects
           </Link>
           <Link href="/services" className="block text-sm font-medium hover:text-accent transition-colors">
             Services
@@ -63,9 +73,9 @@ export function Header() {
             Contact
           </Link>
           <div className="pt-4">
-            <PrimaryButton className="w-full">
-              Get Quote
-            </PrimaryButton>
+            <Link href="/contact" className="block rounded-2xl bg-accent px-6 py-3 text-center text-sm font-medium text-neutral-900 hover:bg-accent-hover transition-colors">
+              Contact
+            </Link>
           </div>
         </nav>
       </div>
