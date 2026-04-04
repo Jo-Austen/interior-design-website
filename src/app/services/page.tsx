@@ -20,7 +20,7 @@ export default function ServicesPage() {
   return (
     <div>
       <Section className="bg-white py-20">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-3xl text-center px-4 sm:px-6">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-4">Services</p>
           <h1 className="text-heading-1 text-neutral-900 mb-6">Design services for every scale</h1>
           <p className="text-lg text-neutral-600 leading-relaxed">

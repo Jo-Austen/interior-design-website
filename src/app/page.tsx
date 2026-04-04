@@ -6,16 +6,16 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-neutral-50 via-white to-neutral-100 min-h-screen flex items-center py-16 px-4">
+      <section className="bg-gradient-to-br from-neutral-50 via-white to-neutral-100 min-h-screen flex items-center py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Text Content */}
             <div className="text-center lg:text-left order-2 lg:order-1">
-              <h1 className="text-display text-neutral-900 mb-8 leading-tight">
+              <h1 className="text-display text-neutral-900 mb-8 leading-tight sm:leading-snug max-w-3xl mx-auto lg:mx-0">
                 Transform Your Space Into<br />
                 <span className="text-accent">Something Extraordinary</span>
               </h1>
-              <p className="text-lg text-neutral-600 mb-12 max-w-2xl mx-auto lg:mx-0 leading-loose">
+              <p className="text-lg text-neutral-600 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 We create elegant, sophisticated interior designs that reflect your unique style and inspire confidence.
                 From residential to commercial spaces, we bring your vision to life with premium craftsmanship and attention to detail.
               </p>
@@ -51,9 +51,9 @@ export default function Home() {
 
       {/* Services Preview */}
       <Section className="bg-white">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 max-w-4xl mx-auto">
           <h2 className="text-heading-1 text-neutral-900 mb-6">Our Services</h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-600 leading-relaxed">
             Comprehensive interior design solutions tailored to your needs and budget,
             delivered with exceptional craftsmanship and attention to detail.
           </p>
@@ -94,9 +94,9 @@ export default function Home() {
 
       {/* Featured Projects */}
       <Section className="bg-neutral-50">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 max-w-4xl mx-auto">
           <h2 className="text-heading-1 text-neutral-900 mb-6">Featured Projects</h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-600 leading-relaxed">
             Explore our portfolio of stunning transformations that showcase our expertise
             in creating spaces that inspire and delight.
           </p>
@@ -136,7 +136,7 @@ export default function Home() {
       {/* About Preview */}
       <Section className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="max-w-3xl">
             <h2 className="text-heading-1 text-neutral-900 mb-8">About Our Studio</h2>
             <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
               With over a decade of experience in interior design, we specialize in creating spaces
@@ -185,8 +185,8 @@ export default function Home() {
       </Section>
 
       {/* Contact CTA */}
-      <Section className="bg-gradient-to-r from-accent to-accent-hover text-neutral-900 relative overflow-hidden">
-        <div className="text-center relative z-10">
+      <Section className="bg-gradient-to-r from-accent to-accent-hover text-neutral-900 relative overflow-hidden py-24">
+        <div className="text-center relative z-10 px-4 sm:px-6">
           <h2 className="text-heading-1 mb-6 text-neutral-900">Ready to Transform Your Space?</h2>
           <p className="text-xl mb-10 max-w-4xl mx-auto leading-relaxed text-neutral-800">
             Let's discuss your vision and create something extraordinary together.
