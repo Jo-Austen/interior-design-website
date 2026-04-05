@@ -3,7 +3,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { SecondaryButton } from "@/components/SecondaryButton";
 
 export default function Home() {
-  const isTemporaryLanding = true;
+  const isTemporaryLanding = false;
 
   return (
     <div>
@@ -24,54 +24,33 @@ export default function Home() {
       ) : (
         <>
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-neutral-50 via-white to-neutral-100 min-h-screen flex items-center py-20 px-4 sm:px-6">
-          <div className="w-full max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                {/* Text Content */}
-                <div className="text-center lg:text-left order-2 lg:order-1">
-                  <h1 className="text-display text-neutral-900 mb-8 leading-tight sm:leading-snug max-w-3xl mx-auto lg:mx-0">
-                    Transform Your Space Into<br />
-                    <span className="text-accent">Something Extraordinary</span>
-                  </h1>
-                  <p className="text-lg text-neutral-600 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    We create elegant, sophisticated interior designs that reflect your unique style and inspire confidence.
-                    From residential to commercial spaces, we bring your vision to life with premium craftsmanship and attention to detail.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                    <PrimaryButton className="px-8 py-4 text-lg">
-                      View Our Portfolio
-                    </PrimaryButton>
-                    <SecondaryButton className="px-8 py-4 text-lg">
-                      Schedule Consultation
-                    </SecondaryButton>
-                  </div>
-                </div>
-
-                {/* Hero Image */}
-                <div className="order-1 lg:order-2">
-                  <div className="relative">
-                    <div className="h-[400px] lg:h-[500px] bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-2xl shadow-2xl flex items-center justify-center border border-neutral-200">
-                      <div className="text-center">
-                        <div className="w-20 h-20 lg:w-24 lg:h-24 bg-accent/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                          <span className="text-3xl lg:text-4xl">🏠</span>
-                        </div>
-                        <span className="text-neutral-500 font-medium">Hero Image Placeholder</span>
-                      </div>
-                    </div>
-                    {/* Decorative elements */}
-                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-accent/20 rounded-full"></div>
-                    <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-accent/10 rounded-full"></div>
-                  </div>
+          <section className="relative min-h-screen bg-[url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center text-white">
+            <div className="absolute inset-0 bg-slate-950/60" />
+            <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
+              <div className="mx-auto max-w-4xl">
+                <p className="text-sm uppercase tracking-[0.35em] text-white/70 mb-6">
+                  Interior Design Studio
+                </p>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight text-white/95 mb-6">
+                  Transform your space into something extraordinary.
+                </h1>
+                <p className="mx-auto text-lg leading-relaxed text-white/75">
+                  We design elevated interiors that feel luminous, calm, and thoughtfully curated for every moment.
+                </p>
+              </div>
+              <div className="absolute inset-x-0 bottom-10 flex justify-center">
+                <div className="flex h-12 w-12 items-end justify-center rounded-full border border-white/30 text-white/80">
+                  <span className="mb-2 text-2xl animate-bounce">⌄</span>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Services Preview */}
-          <Section className="bg-white">
-            <div className="text-center mb-20 max-w-4xl mx-auto">
+          <Section id="services" className="bg-white">
+            <div className="text-center mb-20">
               <h2 className="text-heading-1 text-neutral-900 mb-6">Our Services</h2>
-              <p className="text-lg text-neutral-600 leading-relaxed">
+              <p className="text-lg text-neutral-600 leading-relaxed max-w-4xl mx-auto">
                 Comprehensive interior design solutions tailored to your needs and budget,
                 delivered with exceptional craftsmanship and attention to detail.
               </p>
@@ -111,10 +90,10 @@ export default function Home() {
           </Section>
 
           {/* Featured Projects */}
-          <Section className="bg-neutral-50">
-            <div className="text-center mb-20 max-w-4xl mx-auto">
+          <Section id="projects" className="bg-neutral-50">
+            <div className="text-center mb-20">
               <h2 className="text-heading-1 text-neutral-900 mb-6">Featured Projects</h2>
-              <p className="text-lg text-neutral-600 leading-relaxed">
+              <p className="text-lg text-neutral-600 leading-relaxed max-w-4xl mx-auto">
                 Explore our portfolio of stunning transformations that showcase our expertise
                 in creating spaces that inspire and delight.
               </p>
@@ -152,9 +131,9 @@ export default function Home() {
           </Section>
 
           {/* About Preview */}
-          <Section className="bg-white">
+          <Section id="about" className="bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="max-w-3xl">
+              <div>
                 <h2 className="text-heading-1 text-neutral-900 mb-8">About Our Studio</h2>
                 <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
                   With over a decade of experience in interior design, we specialize in creating spaces
@@ -162,7 +141,7 @@ export default function Home() {
                   artistic vision with technical expertise to deliver exceptional results.
                 </p>
                 <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
-                  We believe that great design should enhance your life, not complicate it. That's why
+                  We believe that great design should enhance your life, not complicate it. That&apos;s why
                   we focus on understanding your needs and creating solutions that work for you,
                   every step of the way.
                 </p>
@@ -207,7 +186,7 @@ export default function Home() {
             <div className="text-center relative z-10 px-4 sm:px-6">
               <h2 className="text-heading-1 mb-6 text-neutral-900">Ready to Transform Your Space?</h2>
               <p className="text-xl mb-10 max-w-4xl mx-auto leading-relaxed text-neutral-800">
-                Let's discuss your vision and create something extraordinary together.
+                Let&apos;s discuss your vision and create something extraordinary together.
                 Schedule a consultation today and take the first step toward your dream space.
               </p>
               <PrimaryButton className="bg-neutral-900 text-white hover:bg-neutral-800 px-10 py-5 text-lg shadow-xl">

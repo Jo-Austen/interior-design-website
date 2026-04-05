@@ -23,13 +23,13 @@ export function Footer() {
               <Link href="/" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
                 Home
               </Link>
-              <Link href="/portfolio" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
-                Portfolio
+              <Link href="/#projects" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
+                Projects
               </Link>
-              <Link href="/services" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
+              <Link href="/#services" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
                 Services
               </Link>
-              <Link href="/about" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
+              <Link href="/#about" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
                 About
               </Link>
               <Link href="/contact" className="block text-sm text-neutral-600 hover:text-accent transition-colors">
