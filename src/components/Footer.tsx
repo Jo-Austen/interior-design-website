@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { Container } from "./Container";
 
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
-      <div className="w-full max-w-6xl mx-auto px-4 py-12">
+      <Container className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
@@ -68,7 +69,7 @@ export function Footer() {
             © 2024 Interior Design Studio. All rights reserved.
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

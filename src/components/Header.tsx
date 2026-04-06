@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Container } from "./Container";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +24,7 @@ export function Header() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
+      <Container className="flex h-20 items-center justify-between">
         <Link
           href="/"
           className={`text-lg font-semibold transition-colors duration-300 ${
@@ -96,7 +97,7 @@ export function Header() {
             EN
           </button>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

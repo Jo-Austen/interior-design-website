@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "../components/Header";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,19 +32,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Header />
-
-        {/* Main Content */}
-        <main className="flex-1">
-          {children}
-        </main>
-
-        <footer className="border-t border-neutral-200 bg-neutral-50">
-          <div className="w-full max-w-6xl mx-auto px-4 py-8">
-            <div className="text-center text-sm text-neutral-600">
-              © 2024 Interior Design Studio. All rights reserved.
-            </div>
-          </div>
-        </footer>
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
