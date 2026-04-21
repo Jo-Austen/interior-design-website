@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { secondaryButtonClassName } from "./buttonStyles";
 
 interface SecondaryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -14,7 +15,7 @@ export function SecondaryButton({
     <button
       type={type}
       {...props}
-      className={`border border-neutral-300 text-neutral-700 px-6 py-3 rounded-md font-medium hover:bg-neutral-50 transition-colors ${className}`}
+      className={secondaryButtonClassName(`px-6 py-3 text-base ${className}`)}
     >
       {children}
     </button>

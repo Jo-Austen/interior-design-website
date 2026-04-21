@@ -4,14 +4,14 @@ import { Section } from "@/components/Section";
 
 export function CtaSection() {
   return (
-    <Section className="relative overflow-hidden bg-gradient-to-r from-accent to-accent-hover py-24 text-neutral-900">
+    <Section className="relative overflow-hidden bg-neutral-950 py-24 text-white">
       <Container>
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <h2 className="text-heading-1 mb-6 text-neutral-900">Ready to Transform Your Space?</h2>
-          <p className="mb-10 text-xl leading-relaxed text-neutral-800">
+          <h2 className="text-heading-1 mb-6 text-white">Ready to Transform Your Space?</h2>
+          <p className="mb-10 text-xl leading-relaxed text-white/72">
             Let&apos;s discuss your vision and create something extraordinary together. Schedule a consultation today and take the first step toward your dream space.
           </p>
-          <PrimaryButton className="bg-neutral-900 px-10 py-5 text-lg text-white shadow-xl hover:bg-neutral-800">
+          <PrimaryButton className="px-10 py-5 text-lg shadow-xl">
             Get In Touch
           </PrimaryButton>
         </div>

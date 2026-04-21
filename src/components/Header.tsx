@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { primaryButtonClassName } from "./buttonStyles";
 import { Container } from "./Container";
 
 export function Header() {
@@ -82,7 +83,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 shadow-sm transition duration-300 hover:bg-emerald-400"
+            className={primaryButtonClassName("px-5 py-3 text-sm")}
           >
             Contact
           </Link>

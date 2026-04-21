@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { primaryButtonClassName } from "@/components/buttonStyles";
 import { Container } from "@/components/Container";
 
 export function ContactHeroSection() {
   return (
     <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgba(15,23,42,0.88),rgba(23,37,84,0.72)),url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.12),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(70,97,204,0.16),transparent_28%)]" />
 
       <Container className="relative flex min-h-[72vh] items-end pb-16 pt-32 lg:pb-20 lg:pt-40">
         <div className="w-full max-w-4xl">
@@ -21,7 +22,7 @@ export function ContactHeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="#contact-form"
-              className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-semibold text-neutral-950 transition-colors hover:bg-accent-hover"
+              className={primaryButtonClassName("px-8 py-4 text-base")}
             >
               Start Your Inquiry
             </Link>
